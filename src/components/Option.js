@@ -1,7 +1,6 @@
 import React from "react";
 
-const Option = ({optionText, handleDeleteOption}) => {
-    return (
+const Option = ({optionText, handleDeleteOption}) => (
         <div>
             {optionText}
             <button
@@ -13,6 +12,5 @@ const Option = ({optionText, handleDeleteOption}) => {
             </button>
         </div>
     );
-};
 
 export {Option}
