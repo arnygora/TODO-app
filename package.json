@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "babel-loader": "^7.1.5",
+    "normalize.css": "^8.0.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "validator": "^10.11.0",
