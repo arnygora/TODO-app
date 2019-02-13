@@ -24,7 +24,7 @@ export default class IndecisionApp extends Component {
 
     handleClearSelectedOption = () => {
         this.setState(() => ({ selectedOption: undefined }));
-    }
+    };
 
     handlePick = () => {
         const randomNum = Math.floor(Math.random() * this.state.options.length);
