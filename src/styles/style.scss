@@ -1,6 +1,9 @@
-$color: indianred;
+@import "./base/settings";
+@import "./base/base";
+@import "base/button";
+@import "./base/container";
+@import "./components/header";
+@import "./components/option";
+@import "./components/add-option";
+@import "./components/widget";
 
-* {
-    margin: 0 auto;
-    color: $color;
-}

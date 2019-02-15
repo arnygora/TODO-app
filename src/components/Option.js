@@ -1,10 +1,14 @@
 import React from "react";
 
-const Option = ({optionText, handleDeleteOption}) => (
-        <div>
-            {optionText}
+const Option = ({optionText, handleDeleteOption, counter}) => {
+    return (
+        <div className='option'>
+            <p className="option__text">
+                {`${++counter}. ${optionText}`}
+            </p>
             <button
-                onClick={(e) => {
+                className='button button--link'
+                onClick={() => {
                     handleDeleteOption(optionText);
                 }}
             >
@@ -12,5 +16,6 @@ const Option = ({optionText, handleDeleteOption}) => (
             </button>
         </div>
     );
+};
 
 export {Option}
