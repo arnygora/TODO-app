@@ -38,7 +38,8 @@ export default class IndecisionApp extends Component {
         if (!option) {
             return 'Enter valid value to add item';
         } else if (this.state.options.indexOf(option) > -1) {
-            return 'This option already exists';
+            // or (this.state.options.includes(option))
+            return 'This option is already exists';
         }
 
         this.setState((prevState) => ({
@@ -80,14 +81,16 @@ export default class IndecisionApp extends Component {
                         hasOptions={this.state.options.length > 0}
                         handlePick={this.handlePick}
                     />
-                    <Options
-                        options={this.state.options}
-                        handleDeleteOptions={this.handleDeleteOptions}
-                        handleDeleteOption={this.handleDeleteOption}
-                    />
-                    <AddOption
-                        handleAddOption={this.handleAddOption}
-                    />
+                    <div className="widget">
+                        <Options
+                            options={this.state.options}
+                            handleDeleteOptions={this.handleDeleteOptions}
+                            handleDeleteOption={this.handleDeleteOption}
+                        />
+                        <AddOption
+                            handleAddOption={this.handleAddOption}
+                        />
+                    </div>
                 </div>
                 <OptionModal
                     selectedOption={this.state.selectedOption}

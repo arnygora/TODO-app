@@ -1,12 +1,14 @@
 import React from "react";
 
-const Option = ({optionText, handleDeleteOption}) => {
+const Option = ({optionText, handleDeleteOption, counter}) => {
     return (
-        <div>
-            {optionText}
+        <div className='option'>
+            <p className="option__text">
+                {`${++counter}. ${optionText}`}
+            </p>
             <button
                 className='button button--link'
-                onClick={(e) => {
+                onClick={() => {
                     handleDeleteOption(optionText);
                 }}
             >
