@@ -5,3 +5,20 @@
   color: $off-white;
   font-style: italic;
 }
+
+// Add Option Form
+
+.add-option-form {
+  display: flex;
+  padding: $s-size;
+
+  input[type='text'] {
+    flex-grow: 1;
+    margin-right: $s-size;
+    padding: $s-size;
+    border: none;
+    border-bottom: 2px solid darken($dark-blue, 10%);
+    background: $dark-blue;
+    color: $off-white;
+  }
+}
