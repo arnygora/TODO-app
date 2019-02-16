@@ -9,5 +9,7 @@
     font-weight: 500;
     font-size: 1.2rem;
     color: white;
+    -ms-word-break: break-all;
+    word-break: break-all;
   }
 }

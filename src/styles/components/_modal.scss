@@ -1,9 +1,9 @@
 .ReactModalPortal > div {
-  display: flex;
   opacity: 0;
 }
 
 .ReactModalPortal .ReactModal__Overlay {
+  display: flex;
   transition: opacity 200ms ease-in-out;
 }
 
@@ -16,6 +16,25 @@ opacity: 0;
 }
 
 .ReactModalPortal .ReactModal__Content {
-  width: 30%;
   margin: auto;
+}
+
+.modal {
+  max-width: 15rem;
+  padding: $l-size;
+  background: $light-blue;
+  text-align: center;
+  color: white;
+
+  .modal__title {
+    margin: 0 0 $m-size 0;
+  }
+
+  .modal__body {
+    margin: 0 0 $l-size 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    -ms-word-break: break-all;
+    word-break: break-all;
+  }
 }
