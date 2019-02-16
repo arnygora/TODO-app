@@ -10,15 +10,27 @@
 
 .add-option-form {
   display: flex;
+  flex-flow: column wrap;
   padding: $s-size;
 
   input[type='text'] {
-    flex-grow: 1;
-    margin-right: $s-size;
+    margin: 0 0 $m-size 0;
     padding: $s-size;
     border: none;
     border-bottom: 2px solid darken($dark-blue, 10%);
-    background: $dark-blue;
+    background: white;
     color: $off-white;
+  }
+}
+
+@media (min-width: $mobile-screen) {
+  .add-option-form {
+    flex-flow: row wrap;
+
+    input[type='text'] {
+      flex-grow: 1;
+      margin: 0 $s-size 0 0;
+      background: $dark-blue;
+    }
   }
 }

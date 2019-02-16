@@ -3,7 +3,7 @@
 .big-button {
   width: 100%;
   padding: $m-size;
-  margin-bottom: $xl-size;
+  margin-bottom: $m-size;
   border: none;
   border-bottom: 5px solid darken($purple, 10%);
   background: $purple;
@@ -11,7 +11,7 @@
   font-weight: bold;
   font-size: $l-size;
 
-  &[disabled]{
+  &[disabled] {
     opacity: 0.5;
   }
 }
@@ -32,4 +32,11 @@
   border: none;
   color: $off-white;
   padding: 0;
+}
+
+
+@media (min-width: $mobile-screen) {
+  .big-button {
+    margin-bottom: $xl-size;
+  }
 }
